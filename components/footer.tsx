@@ -1,8 +1,11 @@
-import { Phone, MessageCircle, Mail, MapPin } from "lucide-react"
+"use client";
+
+import { Phone, MessageCircle, Mail, MapPin, Instagram } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export function Footer() {
-  const phoneNumber = "+381604564481"
-  const phoneDisplay = "+381 60 456 4481"
+  const phoneNumber = "+381604564481";
+  const phoneDisplay = "+381 60 456 4481";
 
   return (
     <footer className="border-t border-border bg-secondary/30 px-4 py-16 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -15,24 +18,46 @@ export function Footer() {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground font-bold text-lg">
                 035
               </div>
-              <span className="font-semibold text-lg text-foreground">Dubinsko Pranje</span>
+              <span className="font-semibold text-lg text-foreground">
+                Dubinsko Pranje
+              </span>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Profesionalne mašine za iznajmljivanje u Pomoravskom okrugu (035). Čistite nameštaj, tepihe i automobile
-              sami i uštedite novac. Lokalna usluga dubinskog pranja u Srbiji.
+              Profesionalne mašine za iznajmljivanje u Pomoravskom okrugu (035).
+              Čistite nameštaj, tepihe i automobile sami i uštedite novac.
+              Lokalna usluga dubinskog pranja u Srbiji.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-6 uppercase tracking-wider">Kontakt</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-6 uppercase tracking-wider">
+              Kontakt
+            </h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li>
                 <a
                   href={`tel:${phoneNumber}`}
                   className="flex items-center gap-3 transition-colors hover:text-primary cursor-pointer group"
+                  onClick={() => trackEvent("click_tel", "footer_tel")}
                 >
                   <Phone className="h-4 w-4 text-primary" />
                   <span className="group-hover:underline">{phoneDisplay}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/DubinskoPranje035/?utm_source=site&utm_medium=footer&utm_campaign=ig_follow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 transition-colors hover:text-primary cursor-pointer group"
+                  onClick={() =>
+                    trackEvent("click_instagram", "footer_instagram")
+                  }
+                >
+                  <Instagram className="h-4 w-4 text-primary" />
+                  <span className="group-hover:underline">
+                    @DubinskoPranje035
+                  </span>
                 </a>
               </li>
               <li>
@@ -41,6 +66,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 transition-colors hover:text-[#25D366] cursor-pointer group"
+                  onClick={() =>
+                    trackEvent("click_whatsapp", "footer_whatsapp")
+                  }
                 >
                   <MessageCircle className="h-4 w-4 text-[#25D366]" />
                   <span className="group-hover:underline">WhatsApp</span>
@@ -48,8 +76,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`viber://chat?number=${phoneNumber.replace(/\+/g, "%2B")}`}
+                  href={`viber://chat?number=${phoneNumber.replace(
+                    /\+/g,
+                    "%2B"
+                  )}`}
                   className="flex items-center gap-3 transition-colors hover:text-[#7360F2] cursor-pointer group"
+                  onClick={() => trackEvent("click_viber", "footer_viber")}
                 >
                   <MessageCircle className="h-4 w-4 text-[#7360F2]" />
                   <span className="group-hover:underline">Viber</span>
@@ -67,23 +99,27 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-6 uppercase tracking-wider">Radno vreme</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-6 uppercase tracking-wider">
+              Radno vreme
+            </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex justify-between">
                 <span>Ponedeljak - Nedelja</span>
               </li>
-              <li className="text-2xl font-bold text-foreground">08:00 - 20:00</li>
+              <li className="text-2xl font-bold text-foreground">
+                08:00 - 20:00
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} Iznajmljivanje Mašina za Dubinsko Čišćenje - Pomoravski okrug. Sva prava
-            zadržana.
+            &copy; {new Date().getFullYear()} Iznajmljivanje Mašina za Dubinsko
+            Čišćenje - Pomoravski okrug. Sva prava zadržana.
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

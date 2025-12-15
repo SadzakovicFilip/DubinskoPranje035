@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button"
-import { Phone, MessageCircle, ArrowRight } from "lucide-react"
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export function CallToAction() {
-  const phoneNumber = "+381604564481"
-  const phoneDisplay = "+381 60 456 4481"
+  const phoneNumber = "+381604564481";
+  const phoneDisplay = "+381 60 456 4481";
 
   return (
     <section
@@ -26,8 +29,10 @@ export function CallToAction() {
           Rezervišite Danas - Imate Čist Dom Sutra
         </h2>
         <p className="text-lg text-muted-foreground mb-10 text-pretty max-w-2xl mx-auto">
-          Pozovite nas ili pošaljite poruku na WhatsApp i dobijete mašinu na vašu adresu u Pomoravskom okrugu (035) - sa
-          kompletnom obukom i podrškom
+          Pozovite nas ili pošaljite poruku na WhatsApp i dobijete mašinu za
+          dubinsko pranje i dubinsko čišćenje na vašu adresu u Pomoravskom
+          okrugu (035) - Ćuprija, Paraćin, Jagodina - sa kompletnom obukom i
+          podrškom.
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 mb-10">
@@ -36,7 +41,10 @@ export function CallToAction() {
             size="lg"
             className="w-full sm:w-auto gap-3 min-h-[56px] min-w-[220px] text-base transition-all hover:scale-105 active:scale-95 hover:shadow-xl hover:shadow-primary/30 cursor-pointer group"
           >
-            <a href={`tel:${phoneNumber}`}>
+            <a
+              href={`tel:${phoneNumber}`}
+              onClick={() => trackEvent("click_tel", "cta_tel")}
+            >
               <Phone className="h-5 w-5" />
               <span className="font-semibold">{phoneDisplay}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -48,7 +56,12 @@ export function CallToAction() {
               size="lg"
               className="w-full sm:w-auto gap-3 min-h-[56px] min-w-[220px] text-base bg-[#25D366] text-white border-[#25D366] hover:bg-[#20BA5A] active:scale-95 transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#25D366]/30 cursor-pointer"
             >
-              <a href={`https://wa.me/${phoneNumber.replace(/\+/g, "")}`} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://wa.me/${phoneNumber.replace(/\+/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("click_whatsapp", "cta_whatsapp")}
+              >
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp
               </a>
@@ -58,7 +71,13 @@ export function CallToAction() {
               size="lg"
               className="w-full sm:w-auto gap-3 min-h-[56px] min-w-[220px] text-base bg-[#7360F2] text-white border-[#7360F2] hover:bg-[#665AC1] active:scale-95 transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#7360F2]/30 cursor-pointer"
             >
-              <a href={`viber://chat?number=${phoneNumber.replace(/\+/g, "%2B")}`}>
+              <a
+                href={`viber://chat?number=${phoneNumber.replace(
+                  /\+/g,
+                  "%2B"
+                )}`}
+                onClick={() => trackEvent("click_viber", "cta_viber")}
+              >
                 <MessageCircle className="h-5 w-5" />
                 Viber
               </a>
@@ -66,10 +85,25 @@ export function CallToAction() {
           </div>
         </div>
 
-        <p className="text-sm text-muted-foreground bg-secondary/50 inline-block px-6 py-3 rounded-full">
-          Odgovaramo odmah - dostupni smo 7 dana u nedelji od 8:00 do 20:00
-        </p>
+        <div className="space-y-3">
+          <p className="text-sm text-muted-foreground bg-secondary/50 inline-block px-6 py-3 rounded-full">
+            Odgovaramo odmah - dostupni smo 7 dana u nedelji od 8:00 do 20:00
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Pratite nas na Instagramu{" "}
+            <a
+              href="https://www.instagram.com/DubinskoPranje035/?utm_source=site&utm_medium=cta&utm_campaign=ig_follow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+              onClick={() => trackEvent("click_instagram", "cta_instagram")}
+            >
+              @DubinskoPranje035
+            </a>{" "}
+            za savete i rezultate dubinskog pranja u 035.
+          </p>
+        </div>
       </div>
     </section>
-  )
+  );
 }

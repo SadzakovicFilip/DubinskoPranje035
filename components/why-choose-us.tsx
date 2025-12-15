@@ -42,10 +42,11 @@ export function WhyChooseUs() {
             Prednosti iznajmljivanja
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6 text-balance">
-            Zašto Hiljade Ljudi Bira Iznajmljivanje Umesto Servisa?
+            Zašto ljudi u 035 (Ćuprija, Paraćin, Jagodina) biraju iznajmljivanje?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Zato što je pametnije, jeftinije i efikasnije - a rezultat je potpuno isti
+            Dubinsko pranje i dubinsko čišćenje kod kuće je pametnije, jeftinije i efikasnije, a rezultat je isti kao u
+            servisu.
           </p>
         </div>
 

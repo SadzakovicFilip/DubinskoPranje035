@@ -1,4 +1,5 @@
-import { CheckCircle, Package, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { CheckCircle } from "lucide-react"
 
 export function MachineInfo() {
   return (
@@ -22,13 +23,15 @@ export function MachineInfo() {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Machine Image Placeholder */}
           <div className="relative animate-in fade-in slide-in-from-left-5 duration-700 order-2 lg:order-1">
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-secondary border border-border/50 flex items-center justify-center overflow-hidden shadow-2xl shadow-primary/10 transition-all duration-500 hover:shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] cursor-pointer group">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-                  <Sparkles className="w-16 h-16 text-primary" />
-                </div>
-                <p className="text-muted-foreground text-sm">[Slika mašine će biti dodata ovde]</p>
-              </div>
+            <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-secondary border border-border/50 overflow-hidden shadow-2xl shadow-primary/10 transition-all duration-500 hover:shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+              <Image
+                src="/placeholder.jpg"
+                alt="Profesionalna mašina za dubinsko pranje u Pomoravlju 035 (Ćuprija, Paraćin, Jagodina)"
+                width={900}
+                height={900}
+                className="h-full w-full object-cover"
+                priority
+              />
             </div>
           </div>
 
@@ -103,13 +106,15 @@ export function MachineInfo() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Accessories Image Placeholder */}
             <div className="relative animate-in fade-in slide-in-from-left-5 duration-700 delay-200 order-2 lg:order-1">
-              <div className="aspect-video rounded-3xl bg-gradient-to-br from-secondary to-primary/5 border border-border/50 flex items-center justify-center overflow-hidden shadow-xl transition-all duration-500 hover:shadow-primary/10 hover:scale-[1.02] active:scale-[0.98] cursor-pointer group">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-                    <Package className="w-12 h-12 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground text-sm">[Slika dodataka i pribora biće dodata ovde]</p>
-                </div>
+              <div className="aspect-video rounded-3xl bg-gradient-to-br from-secondary to-primary/5 border border-border/50 overflow-hidden shadow-xl transition-all duration-500 hover:shadow-primary/10 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+                <Image
+                  src="/placeholder.jpg"
+                  alt="Pribor i nastavci za dubinsko čišćenje tepiha, nameštaja i automobila u 035"
+                  width={1200}
+                  height={675}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
 

@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Phone } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Phone } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 const navLinks = [
   { name: "Početna", href: "#hero" },
@@ -12,39 +13,39 @@ const navLinks = [
   { name: "Cenovnik", href: "#pricing" },
   { name: "Zašto mi", href: "#why-choose-us" },
   { name: "Kontakt", href: "#contact-section" },
-]
+];
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const phoneNumber = "+381604564481"
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const phoneNumber = "+381604564481";
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isDrawerOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = "unset"
-    }
-  }, [isDrawerOpen])
+      document.body.style.overflow = "unset";
+    };
+  }, [isDrawerOpen]);
 
   const handleNavClick = (href: string) => {
-    setIsDrawerOpen(false)
-    const element = document.querySelector(href)
+    setIsDrawerOpen(false);
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" })
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }
+  };
 
   return (
     <>
@@ -61,15 +62,17 @@ export function Navigation() {
             <a
               href="#hero"
               onClick={(e) => {
-                e.preventDefault()
-                handleNavClick("#hero")
+                e.preventDefault();
+                handleNavClick("#hero");
               }}
               className="flex items-center gap-2 cursor-pointer group"
             >
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground font-bold text-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                 035
               </div>
-              <span className="hidden sm:block font-semibold text-foreground">Dubinsko Pranje</span>
+              <span className="hidden sm:block font-semibold text-foreground">
+                Dubinsko Pranje
+              </span>
             </a>
 
             {/* Desktop Navigation - hidden, drawer used for both */}
@@ -79,8 +82,8 @@ export function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(link.href)
+                    e.preventDefault();
+                    handleNavClick(link.href);
                   }}
                   className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-accent cursor-pointer relative group"
                 >
@@ -97,7 +100,10 @@ export function Navigation() {
                 size="sm"
                 className="hidden sm:inline-flex gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer"
               >
-                <a href={`tel:${phoneNumber}`}>
+                <a
+                  href={`tel:${phoneNumber}`}
+                  onClick={() => trackEvent("click_tel", "nav_tel")}
+                >
                   <Phone className="h-4 w-4" />
                   <span className="hidden md:inline">Pozovite nas</span>
                 </a>
@@ -147,13 +153,16 @@ export function Navigation() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => {
-                  e.preventDefault()
-                  handleNavClick(link.href)
+                  e.preventDefault();
+                  handleNavClick(link.href);
                 }}
                 className={`block px-6 py-4 text-right text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 border-b border-border/30 transition-all cursor-pointer ${
                   isDrawerOpen ? "animate-in fade-in slide-in-from-right-3" : ""
                 }`}
-                style={{ animationDelay: `${index * 50}ms`, animationFillMode: "both" }}
+                style={{
+                  animationDelay: `${index * 50}ms`,
+                  animationFillMode: "both",
+                }}
               >
                 {link.name}
               </a>
@@ -162,16 +171,21 @@ export function Navigation() {
 
           {/* Drawer Footer */}
           <div className="p-4 border-t border-border bg-muted/30 space-y-3">
-            <Button asChild className="w-full gap-2 min-h-[48px] cursor-pointer">
+            <Button
+              asChild
+              className="w-full gap-2 min-h-[48px] cursor-pointer"
+            >
               <a href={`tel:${phoneNumber}`}>
                 <Phone className="h-5 w-5" />
                 Pozovite nas
               </a>
             </Button>
-            <p className="text-center text-sm text-muted-foreground">Pomoravlje | Ćuprija • Paraćin • Jagodina</p>
+            <p className="text-center text-sm text-muted-foreground">
+              Pomoravlje | Ćuprija • Paraćin • Jagodina
+            </p>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
