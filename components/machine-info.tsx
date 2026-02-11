@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { CheckCircle } from "lucide-react"
+import { AccessoriesSlideshow } from "@/components/accessories-slideshow"
 
 export function MachineInfo() {
   return (
@@ -21,17 +22,19 @@ export function MachineInfo() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* Machine Image Placeholder */}
+          {/* Machine Image – ceo uređaj u punoj rezoluciji */}
           <div className="relative animate-in fade-in slide-in-from-left-5 duration-700 order-2 lg:order-1">
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-secondary border border-border/50 overflow-hidden shadow-2xl shadow-primary/10 transition-all duration-500 hover:shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
-              <Image
-                src="/placeholder.jpg"
-                alt="Profesionalna mašina za dubinsko pranje u Pomoravlju 035 (Ćuprija, Paraćin, Jagodina)"
-                width={900}
-                height={900}
-                className="h-full w-full object-cover"
-                priority
-              />
+            <div className="rounded-3xl border border-border/60 overflow-hidden shadow-2xl shadow-primary/15 bg-card">
+              <div className="relative aspect-square bg-background/80">
+                <Image
+                  src="/images/DubinskoPranje035_slika1.jpg"
+                  alt="Profesionalna mašina za dubinsko pranje u Pomoravlju 035 (Ćuprija, Paraćin, Jagodina)"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
@@ -104,18 +107,9 @@ export function MachineInfo() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Accessories Image Placeholder */}
+            {/* Accessories Slideshow – levo, 4 slike iz /public/images */}
             <div className="relative animate-in fade-in slide-in-from-left-5 duration-700 delay-200 order-2 lg:order-1">
-              <div className="aspect-video rounded-3xl bg-gradient-to-br from-secondary to-primary/5 border border-border/50 overflow-hidden shadow-xl transition-all duration-500 hover:shadow-primary/10 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
-                <Image
-                  src="/placeholder.jpg"
-                  alt="Pribor i nastavci za dubinsko čišćenje tepiha, nameštaja i automobila u 035"
-                  width={1200}
-                  height={675}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+              <AccessoriesSlideshow />
             </div>
 
             {/* Accessories List */}
@@ -123,15 +117,15 @@ export function MachineInfo() {
               {[
                 {
                   title: "Profesionalni Deterdžent za Dubinsko Pranje",
-                  desc: "Ekološki deterdžent specijalizovan za dubinsko čišćenje - efikasan protiv mrlja, bezbedan za alergičare",
+                  desc: "Ekološki deterdžent specijalizovan za dubinsko čišćenje - efikasan protiv mrlja, bezbedan za alergičare.",
                 },
                 {
-                  title: "Kompletan Set Nastavaka i Četki",
-                  desc: "Razne četke i nastavci za tepihe, nameštaj, stepenice, automobile - sve površine pokrivene",
+                  title: "Šrafilica sa četkama",
+                  desc: "Električna šrafilica sa specijalnim četkama za detaljno ribanje i skidanje tvrdokornih fleka sa tepiha, nameštaja i auto sedišta.",
                 },
                 {
                   title: "Detaljno Štampano Uputstvo na Srpskom",
-                  desc: "Korak po korak ilustrovano uputstvo sa savetima za različite vrste materijala i mrlja",
+                  desc: "Korak po korak ilustrovano uputstvo sa savetima za različite vrste materijala i mrlja.",
                 },
               ].map((item, index) => (
                 <div
@@ -164,10 +158,17 @@ export function MachineInfo() {
           <h3 className="text-2xl font-bold text-center mb-10">Tehničke Karakteristike</h3>
           <div className="grid sm:grid-cols-2 gap-4 bg-secondary/30 rounded-3xl p-8 border border-border/50">
             {[
-              { label: "Snaga motora", value: "[Podaci će biti dodati]" },
-              { label: "Kapacitet rezervoara", value: "[Podaci će biti dodati]" },
-              { label: "Dužina creva", value: "[Podaci će biti dodati]" },
-              { label: "Težina", value: "[Podaci će biti dodati]" },
+              { label: "Težina", value: "12,8 kg" },
+              { label: "Dimenzije", value: "52,4 × 33,2 × 44,2 cm" },
+              { label: "Maks. učinak po površini (m²/h)", value: "12 – 18" },
+              { label: "Protok vazduha (l/s)", value: "71" },
+              { label: "Usisavanje (mbar/kPa)", value: "270 / 27" },
+              { label: "Količina raspršivanja (l/min)", value: "1" },
+              { label: "Pritisak raspršivanja (bar)", value: "1" },
+              { label: "Rezervoar za čistu / prljavu vodu (l)", value: "8 / 7" },
+              { label: "Snaga turbine (W)", value: "max. 40" },
+              { label: "Strujni tip (Ph/V/Hz)", value: "1 / 220 – 240 / 50 – 60" },
+              { label: "Težina bez pribora (kg)", value: "8,6" },
             ].map((spec, index) => (
               <div
                 key={index}
@@ -177,6 +178,25 @@ export function MachineInfo() {
                 <div className="text-xl font-semibold text-foreground">{spec.value}</div>
               </div>
             ))}
+          </div>
+
+          {/* Oprema */}
+          <div className="mt-10">
+            <h4 className="text-xl font-semibold text-center mb-6">Oprema</h4>
+            <ul className="grid sm:grid-cols-2 gap-3 text-sm text-muted-foreground">
+              {[
+                "Napojni kabl, 7.5 m",
+                "Kratka mlaznica s integrisanom ručkom",
+                "Usisno crevo sa raspršivačem (2.5 m)",
+                "Uklonjivi 2-u-1 rezervoar",
+                "Integrisano spremište za pribor i mlaznice",
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

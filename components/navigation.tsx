@@ -56,7 +56,7 @@ export function Navigation() {
             : "bg-background/80 backdrop-blur-md"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-10xl px-4 sm:px-6 lg:px-8 " >
           <div className="flex h-16 sm:h-20 items-center justify-between">
             {/* Logo */}
             <a
