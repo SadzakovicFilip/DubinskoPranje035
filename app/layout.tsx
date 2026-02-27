@@ -90,9 +90,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: "/logo.png",
   },
   verification: {
@@ -261,7 +259,6 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <head>
-        <!-- Google tag (gtag.js) -->
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-CZ3WV8852Y"
