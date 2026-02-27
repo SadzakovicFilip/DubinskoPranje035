@@ -7,20 +7,20 @@ import { Button } from "@/components/ui/button";
 const pricingPlans = [
   {
     duration: "1 Dan",
-    price: "1,500",
-    description: "Idealno za brzo osvežavanje",
+    price: "3,500",
+    description: "Idealno za brzo, temeljno čišćenje jedne prostorije ili automobila.",
     popular: false,
   },
   {
     duration: "2 Dana",
-    price: "2,500",
-    description: "Najčešći izbor naših klijenata",
+    price: "5,500",
+    description: "Najčešći izbor – dovoljno vremena za ceo stan ili kuću.",
     popular: true,
   },
   {
-    duration: "3-5 Dana",
-    price: "3,500",
-    description: "Za veće projekte i domaćinstva",
+    duration: "3 Dana",
+    price: "7,000",
+    description: "Za veće projekte, više prostora ili detaljno čišćenje bez žurbe.",
     popular: false,
   },
 ];
