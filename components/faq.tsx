@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
 const faqs = [
   {
     question: "Da li dostavljate mašinu u Ćupriji, Paraćinu i Jagodini?",
@@ -44,6 +49,12 @@ const faqs = [
 ];
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section
       id="faq"
@@ -64,19 +75,39 @@ export function FAQ() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((item, index) => (
             <div
               key={item.question}
-              className="rounded-2xl border border-border/60 bg-card/70 backdrop-blur-sm p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
-              style={{ animationDelay: `${index * 80}ms` }}
+              className="rounded-2xl border border-border/60 bg-card/70 backdrop-blur-sm overflow-hidden transition-all duration-200 hover:shadow-lg hover:shadow-primary/5"
             >
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {item.question}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {item.answer}
-              </p>
+              <button
+                onClick={() => toggle(index)}
+                className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer"
+                aria-expanded={openIndex === index}
+              >
+                <h3 className="text-lg font-semibold text-foreground pr-4">
+                  {item.question}
+                </h3>
+                <ChevronDown
+                  className={`h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <div
+                className={`grid transition-all duration-300 ease-in-out ${
+                  openIndex === index
+                    ? "grid-rows-[1fr] opacity-100"
+                    : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 text-muted-foreground leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

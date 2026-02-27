@@ -1,24 +1,58 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
-const navLinks = [
-  { name: "Početna", href: "#hero" },
-  { name: "Kako funkcioniše", href: "#how-it-works" },
-  { name: "Mašina", href: "#machine-info" },
-  { name: "Šta možete čistiti", href: "#what-to-clean" },
-  { name: "Cenovnik", href: "#pricing" },
-  { name: "Zašto mi", href: "#why-choose-us" },
-  { name: "Kontakt", href: "#contact-section" },
+const mainNavLinks = [
+  { name: "Početna", href: "/" },
+  {
+    name: "Usluge",
+    href: "#",
+    children: [
+      { name: "Dubinsko pranje nameštaja", href: "/dubinsko-pranje-namestaja" },
+      { name: "Dubinsko pranje tepiha", href: "/dubinsko-pranje-tepiha" },
+      { name: "Dubinsko pranje automobila", href: "/dubinsko-pranje-automobila" },
+    ],
+  },
+  {
+    name: "Lokacije",
+    href: "#",
+    children: [
+      { name: "Ćuprija", href: "/dubinsko-pranje-cuprija" },
+      { name: "Paraćin", href: "/dubinsko-pranje-paracin" },
+      { name: "Jagodina", href: "/dubinsko-pranje-jagodina" },
+    ],
+  },
+  { name: "Cenovnik", href: "/cenovnik" },
+  { name: "Kako funkcioniše", href: "/kako-funkcionise" },
+  { name: "Blog", href: "/blog" },
+  { name: "Kontakt", href: "/kontakt" },
+];
+
+const mobileNavLinks = [
+  { name: "Početna", href: "/" },
+  { name: "Dubinsko pranje nameštaja", href: "/dubinsko-pranje-namestaja" },
+  { name: "Dubinsko pranje tepiha", href: "/dubinsko-pranje-tepiha" },
+  { name: "Dubinsko pranje automobila", href: "/dubinsko-pranje-automobila" },
+  { name: "Ćuprija", href: "/dubinsko-pranje-cuprija" },
+  { name: "Paraćin", href: "/dubinsko-pranje-paracin" },
+  { name: "Jagodina", href: "/dubinsko-pranje-jagodina" },
+  { name: "Cenovnik", href: "/cenovnik" },
+  { name: "Kako funkcioniše", href: "/kako-funkcionise" },
+  { name: "Blog", href: "/blog" },
+  { name: "Kontakt", href: "/kontakt" },
 ];
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const phoneNumber = "+381604564481";
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +73,10 @@ export function Navigation() {
     };
   }, [isDrawerOpen]);
 
-  const handleNavClick = (href: string) => {
+  useEffect(() => {
     setIsDrawerOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+    setOpenDropdown(null);
+  }, [pathname]);
 
   return (
     <>
@@ -56,44 +87,74 @@ export function Navigation() {
             : "bg-background/80 backdrop-blur-md"
         }`}
       >
-        <div className="mx-auto max-w-10xl px-4 sm:px-6 lg:px-8 " >
+        <div className="mx-auto max-w-10xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 sm:h-20 items-center justify-between">
-            {/* Logo */}
-            <a
-              href="#hero"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("#hero");
-              }}
+            <Link
+              href="/"
               className="flex items-center gap-2 cursor-pointer group"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground font-bold text-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                035
-              </div>
+              <img
+                src="/favicon.svg"
+                alt="Dubinsko Pranje 035 - Logo"
+                width={40}
+                height={40}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
               <span className="hidden sm:block font-semibold text-foreground">
                 Dubinsko Pranje
               </span>
-            </a>
+            </Link>
 
-            {/* Desktop Navigation - hidden, drawer used for both */}
             <div className="hidden xl:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
-                  className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-accent cursor-pointer relative group"
-                >
-                  {link.name}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-1/2 rounded-full" />
-                </a>
-              ))}
+              {mainNavLinks.map((link) =>
+                link.children ? (
+                  <div
+                    key={link.name}
+                    className="relative"
+                    onMouseEnter={() => setOpenDropdown(link.name)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                    <button
+                      className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-accent cursor-pointer flex items-center gap-1"
+                    >
+                      {link.name}
+                      <ChevronDown className="h-3.5 w-3.5" />
+                    </button>
+                    {openDropdown === link.name && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-card border border-border rounded-xl shadow-xl py-2 z-50">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={`block px-4 py-2.5 text-sm transition-colors hover:bg-accent ${
+                              pathname === child.href
+                                ? "text-primary font-medium"
+                                : "text-muted-foreground hover:text-foreground"
+                            }`}
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-accent relative group ${
+                      pathname === link.href
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {link.name}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-1/2 rounded-full" />
+                  </Link>
+                )
+              )}
             </div>
 
-            {/* CTA Button & Menu Toggle */}
             <div className="flex items-center gap-3">
               <Button
                 asChild
@@ -133,7 +194,6 @@ export function Navigation() {
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Drawer Header */}
         <div className="flex items-center justify-between p-4 border-b border-border bg-muted/50">
           <span className="font-semibold text-foreground">Meni</span>
           <button
@@ -145,36 +205,29 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* Drawer Content */}
         <div className="flex flex-col h-[calc(100%-73px)] bg-card">
           <div className="flex-1 overflow-y-auto py-4">
-            {navLinks.map((link, index) => (
-              <a
-                key={link.name}
+            {mobileNavLinks.map((link, index) => (
+              <Link
+                key={link.href}
                 href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(link.href);
-                }}
-                className={`block px-6 py-4 text-right text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 border-b border-border/30 transition-all cursor-pointer ${
-                  isDrawerOpen ? "animate-in fade-in slide-in-from-right-3" : ""
-                }`}
+                className={`block px-6 py-4 text-right text-base font-medium border-b border-border/30 transition-all ${
+                  pathname === link.href
+                    ? "text-primary bg-primary/5"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                } ${isDrawerOpen ? "animate-in fade-in slide-in-from-right-3" : ""}`}
                 style={{
                   animationDelay: `${index * 50}ms`,
                   animationFillMode: "both",
                 }}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Drawer Footer */}
           <div className="p-4 border-t border-border bg-muted/30 space-y-3">
-            <Button
-              asChild
-              className="w-full gap-2 min-h-[48px] cursor-pointer"
-            >
+            <Button asChild className="w-full gap-2 min-h-[48px] cursor-pointer">
               <a href={`tel:${phoneNumber}`}>
                 <Phone className="h-5 w-5" />
                 Pozovite nas

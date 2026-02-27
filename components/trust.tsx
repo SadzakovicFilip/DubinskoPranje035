@@ -8,28 +8,41 @@ export function TrustBlock() {
               Poverenje u 035
             </p>
             <h2 className="text-3xl font-bold text-foreground text-balance">
-              Recenzije i preporuke za dubinsko pranje u Ćupriji, Paraćinu i
-              Jagodini
+              Zašto nam veruju korisnici u Ćupriji, Paraćinu i Jagodini
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Placeholder dok ne stignu prave recenzije. Ovde ćemo istaći ocene
-              i iskustva klijenata iz Pomoravskog okruga. Kada dobijemo prve
-              ocene, dodaćemo ih i u schema (aggregateRating).
+              Profesionalna oprema, dostava na adresu i podrška tokom celog
+              procesa dubinskog pranja. Svaki korisnik dobija kompletnu obuku i
+              uputstva za postizanje najboljeg rezultata.
             </p>
           </div>
-          <div className="rounded-2xl bg-primary text-primary-foreground p-8 space-y-3 shadow-xl shadow-primary/20">
-            <div className="text-4xl font-bold">4.9/5</div>
-            <p className="text-sm opacity-90">
-              120+ zakupa mašine za dubinsko pranje u 035 (placeholder)
-            </p>
-            <p className="text-sm opacity-90">
-              „Brza dostava u Ćupriji, obuka na licu mesta i mašina je izvadila
-              svu prljavštinu iz tepiha.“ — Primer korisnika
-            </p>
-            <p className="text-xs opacity-80">
-              Zameniti stvarnim ocenama čim budu dostupne (GBP / Instagram /
-              direktni upiti).
-            </p>
+          <div className="rounded-2xl bg-primary text-primary-foreground p-8 space-y-4 shadow-xl shadow-primary/20">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-primary-foreground/20 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                  ✓
+                </div>
+                <span className="text-sm font-medium">Profesionalna mašina iste klase kao u čistionicama</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-primary-foreground/20 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                  ✓
+                </div>
+                <span className="text-sm font-medium">Dostava i preuzimanje na vašu adresu u Pomoravskom okrugu</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-primary-foreground/20 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                  ✓
+                </div>
+                <span className="text-sm font-medium">Deterdžent, oprema i uputstva uključeni u cenu</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-primary-foreground/20 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                  ✓
+                </div>
+                <span className="text-sm font-medium">Telefonska podrška 7 dana u nedelji od 08h do 20h</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -20,17 +20,14 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center px-4 pt-24 pb-16 sm:px-6 sm:pt-28 sm:pb-20 lg:px-8 lg:pt-32 overflow-hidden"
     >
-      {/* Background image preko cele stranice */}
-      <div className="absolute inset-0 -z-10 hidden md:block" style={{backgroundColor:"black"}}>
+      <div className="absolute inset-0 -z-10 hidden md:block bg-black">
         <Image
-        style={{opacity:0.55}}
           src="/images/DubinskoCiscenje035_slika6.jpg"
           alt="Profesionalna mašina za dubinsko čišćenje - Dubinsko Pranje 035"
           fill
           priority
           sizes="100vw"
-          /* slika preko celog ekrana */
-          className="object-cover object-center opacity-95"
+          className="object-cover object-center opacity-55"
         />
       </div>
       <div className="absolute inset-0 -z-10 block md:hidden">
@@ -40,12 +37,10 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          /* slika preko celog ekrana */
           className="object-cover object-center opacity-95"
         />
       </div>
 
-      {/* Globalni poluprovidni overlay preko cele hero sekcije (full width & height) */}
       <div className="absolute inset-0 -z-5 bg-black/20" />
 
       <div className="mx-auto max-w-7xl w-full">
@@ -61,12 +56,12 @@ export function Hero() {
 
           <h1 className="mb-8 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl text-balance animate-in fade-in slide-in-from-bottom-5 duration-700 delay-100 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
             Iznajmljivanje Mašina za Dubinsko Pranje
-            <span className="block mt-2 text-primary" style={{color:"white"}}>
+            <span className="block mt-2 text-white">
               Ćuprija, Paraćin, Jagodina (035)
             </span>
           </h1>
 
-          <p style={{color:"white", fontWeight:"bold"}} className="mb-10 text-lg  sm:text-xl lg:text-2xl leading-relaxed text-pretty animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200 max-w-3xl mx-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.85)]">
+          <p className="mb-10 text-lg sm:text-xl lg:text-2xl leading-relaxed text-white font-bold text-pretty animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200 max-w-3xl mx-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.85)]">
             Profesionalno pranje tepiha, nameštaja i vozila – čist dom, zdravija
             porodica –{" "}
             <strong className="text-white font-semibold">
@@ -134,7 +129,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 rounded-full bg-primary" />
-              <span>100+ zadovoljnih klijenata</span>
+              <span>Deterdžent i oprema uključeni</span>
             </div>
           </div>
         </div>
@@ -142,4 +137,3 @@ export function Hero() {
     </section>
   );
 }
-
