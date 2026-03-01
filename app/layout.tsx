@@ -132,7 +132,7 @@ const businessJsonLd = {
         "Saturday",
         "Sunday",
       ],
-      opens: "08:00",
+      opens: "10:00",
       closes: "20:00",
     },
   ],
@@ -189,7 +189,7 @@ const faqJsonLd = {
       name: "Da li dostavljate mašinu za dubinsko pranje u Ćupriji, Paraćinu i Jagodini?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Da, dostavljamo mašinu za dubinsko pranje i dubinsko čišćenje na adresu u Ćupriji, Paraćinu i Jagodini (035). Cena dostave zavisi od lokacije.",
+        text: "Da, dostavljamo mašinu za dubinsko pranje i dubinsko čišćenje na adresu u Ćupriji, Paraćinu i Jagodini (035). Dostava se vrši između 16h i 19h, preuzimanje može od 10h do 20h. Cena dostave zavisi od lokacije.",
       },
     },
     {
@@ -213,7 +213,7 @@ const faqJsonLd = {
       name: "Mogu li da iznajmim mašinu za dubinsko čišćenje vikendom?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Da, radimo svakog dana od 08:00 do 20:00 uključujući vikend. Možete zakazati preuzimanje ili dostavu bilo kog dana.",
+        text: "Da, radimo svakog dana uključujući vikend. Preuzimanje može od 10h do 20h, dostava mašine u periodu između 16h i 19h.",
       },
     },
     {

@@ -1,37 +1,47 @@
-import Link from "next/link"
-import { Sofa, LayoutGrid, Car, ArrowRight } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/image"
+import Link from "next/link";
+import { Sofa, LayoutGrid, Car, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const cleaningOptions = [
   {
     icon: Sofa,
     title: "Nameštaj",
-    items: ["Sofe i fotelje", "Madrac i jastuk", "Trpezarijske stolice", "Tapacirung nameštaj"],
-    image: "/images/DubinskoPranje035_slika2.jpg",
+    items: [
+      "Sofe i fotelje",
+      "Madrac i jastuk",
+      "Trpezarijske stolice",
+      "Tapacirung nameštaj",
+    ],
+    image: "/images/DubinskoPranje035_slika7.jpg",
     href: "/dubinsko-pranje-namestaja",
   },
   {
     icon: LayoutGrid,
     title: "Tepisi i prostirke",
     items: ["Veliki tepisi", "Male prostirke", "Tekući podovi", "Stubišta"],
-    image: "/images/DubinskoPranje035_slika4.jpg",
+    image: "/images/DubinskoPranje035_slika8.jpeg",
     href: "/dubinsko-pranje-tepiha",
   },
   {
     icon: Car,
     title: "Automobili",
-    items: ["Sedišta automobila", "Tapete na vratima", "Gepek", "Krovne obloge"],
-    image: "/images/DubinskoPranje035_slika3.jpg",
+    items: [
+      "Sedišta automobila",
+      "Tapete na vratima",
+      "Gepek",
+      "Krovne obloge",
+    ],
+    image: "/images/DubinskoCiscenje035_slika7.jpg",
     href: "/dubinsko-pranje-automobila",
   },
-]
+];
 
 export function WhatToClean() {
   return (
     <section
       id="what-to-clean"
-      className="px-4 py-20 sm:py-28 sm:px-6 lg:px-8 bg-secondary/50 relative overflow-hidden"
+      className="scroll-mt-16 px-4 py-20 sm:py-28 sm:px-6 lg:px-8 bg-secondary/50 relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -46,18 +56,14 @@ export function WhatToClean() {
             Vraćamo Život Svakom Nameštaju, Tepihu i Automobilu
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Od zaprljanih sofa do osveženih automobila - profesionalne mašine koje uklanjaju ono što običan usisivač ne
-            može
+            Od zaprljanih sofa do osveženih automobila - profesionalne mašine
+            koje uklanjaju ono što običan usisivač ne može
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
           {cleaningOptions.map((option, index) => (
-            <Link
-              key={index}
-              href={option.href}
-              className="block"
-            >
+            <Link key={index} href={option.href} className="block">
               <Card
                 className="border-border/50 bg-card/80 backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 active:scale-[0.98] hover:shadow-2xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-4 duration-700 cursor-pointer group h-full"
                 style={{ animationDelay: `${index * 150}ms` }}
@@ -78,7 +84,9 @@ export function WhatToClean() {
                   </div>
 
                   <div className="px-8 pt-6">
-                    <h3 className="mb-5 text-xl font-semibold text-foreground text-center">{option.title}</h3>
+                    <h3 className="mb-5 text-xl font-semibold text-foreground text-center">
+                      {option.title}
+                    </h3>
                     <ul className="space-y-3 w-full pl-4">
                       {option.items.map((item, itemIndex) => (
                         <li
@@ -107,5 +115,5 @@ export function WhatToClean() {
         </div>
       </div>
     </section>
-  )
+  );
 }

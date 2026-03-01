@@ -226,6 +226,7 @@ export default function DubinskoNamPage() {
             <p>
               Nudimo iznajmljivanje profesionalne mašine za dubinsko pranje
               nameštaja sa dostavom na adresu u Ćupriji, Paraćinu i Jagodini.
+              Dostava se vrši između 16h i 19h, preuzimanje od 10h do 20h.
               Cena iznajmljivanja počinje od 3.500 RSD za jedan dan, što je
               višestruko jeftinije od angažovanja profesionalnog servisa za
               dubinsko čišćenje. Uz mašinu dobijate deterdžent, sve nastavke i

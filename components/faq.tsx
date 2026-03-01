@@ -7,39 +7,35 @@ const faqs = [
   {
     question: "Da li dostavljate mašinu u Ćupriji, Paraćinu i Jagodini?",
     answer:
-      "Da. Dostavljamo u Ćupriju, Paraćin i Jagodinu (035). Možete i da preuzmete lično ako vam je brže.",
+      "Da. Dostavljamo u Ćupriju, Paraćin i Jagodinu (035). Dostava između 16h i 19h, preuzimanje od 10h do 20h. Možete i da preuzmete lično ako vam je brže.",
   },
   {
     question:
-      "Koliko traje sušenje posle dubinskog pranja nameštaja ili tepiha?",
+      "Koliko traje sušenje posle dubinskog pranja automobila, nameštaja ili tepiha?",
     answer:
       "Uz snažnu ekstrakciju sušenje traje u proseku 2–6 sati, zavisno od materijala i provetrenosti prostora.",
   },
+
   {
-    question: "Da li je deterdžent bezbedan za decu i kućne ljubimce?",
+    question: "Radite li vikendom i kako se vrši plaćanje?",
     answer:
-      "Koristimo profesionalni deterdžent koji je bezbedan pri pravilnoj upotrebi i ispiranju. Sve uputstvo dobijate uz mašinu.",
-  },
-  {
-    question: "Radite li vikendom i da li postoji depozit?",
-    answer:
-      "Radimo svaki dan 08–20h. Depozit nije potreban ako se zadrže standardni uslovi korišćenja.",
+      "Preuzimanje može od 10h do 20h, dostava u periodu između 16h i 19h. Plaćanje se vrši unapred pri preuzimanju uređaja",
   },
   {
     question: "Da li mašina radi za auto sedišta i tapacirunge?",
-    answer:
-      "Da. U kompletu su nastavci za auto sedišta, tapacirunge na vratima, gepek i teže dostupna mesta.",
+    answer: "Da. Apsolutno",
   },
   {
-    question: "Koliko košta dubinsko pranje tepiha po m² u 035 regionu?",
+    question:
+      "Koliko košta dubinsko pranje tepiha, nameštaja i vozila po m² u 035 regionu?",
     answer:
-      "Za iznajmljivanje mašine plaćate fiksnu dnevnu cenu. Tipičan trošak za dubinsko čišćenje tepiha ispadne znatno niži od servisa jer plaćate samo najam mašine.",
+      "Za iznajmljivanje mašine plaćate fiksnu dnevnu cenu. Tipičan trošak za dubinsko čišćenje tepiha,nameštaja i vozila ispadne znatno niži od servisa jer plaćate samo najam mašine.",
   },
   {
     question:
       "Da li dobijam deterdžent uz iznajmljivanje usisivača za dubinsko pranje?",
     answer:
-      "Da, dobijate profesionalni deterdžent optimizovan za dubinsko pranje i dubinsko čišćenje. Možete poneti sopstveni ako imate preferencu.",
+      "Da, dobijate profesionalni deterdžent optimizovan za dubinsko pranje i dubinsko čišćenje.",
   },
   {
     question: "Kako da pripremim stan pre dubinskog pranja?",
@@ -58,7 +54,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="px-4 py-20 sm:py-28 sm:px-6 lg:px-8 bg-background"
+      className="scroll-mt-16 px-4 py-20 sm:py-28 sm:px-6 lg:px-8 bg-background"
     >
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-12">

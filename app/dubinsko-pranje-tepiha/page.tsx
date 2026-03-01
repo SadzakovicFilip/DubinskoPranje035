@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: "https://dubinskopranje035.rs/dubinsko-pranje-tepiha",
     images: [
       {
-        url: "/images/DubinskoPranje035_slika4.jpg",
+        url: "/images/DubinskoPranje035_slika8.jpeg",
         width: 1200,
         height: 630,
         alt: "Dubinsko pranje tepiha profesionalnom mašinom",
@@ -119,7 +119,7 @@ export default function DubinskoTepihPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
               <Image
-                src="/images/DubinskoPranje035_slika4.jpg"
+                src="/images/DubinskoPranje035_slika8.jpeg"
                 alt="Dubinsko pranje tepiha profesionalnom mašinom u Pomoravskom okrugu"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -189,42 +189,43 @@ export default function DubinskoTepihPage() {
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
             <p>
-              Dubinsko pranje tepiha je najefikasniji način za uklanjanje
-              duboko ukorenjene prljavštine, mrlja, alergena i neprijatnih
-              mirisa iz tepiha. Naša profesionalna mašina ubrizgava rastvor
-              deterdženta pod pritiskom duboko u vlakna tepiha, a zatim snažnom
-              ekstrakcijom izvlači svu prljavštinu zajedno sa viškom vode.
+              Dubinsko pranje tepiha je najefikasniji način za uklanjanje duboko
+              ukorenjene prljavštine, mrlja, alergena i neprijatnih mirisa iz
+              tepiha. Naša profesionalna mašina ubrizgava rastvor deterdženta
+              pod pritiskom duboko u vlakna tepiha, a zatim snažnom ekstrakcijom
+              izvlači svu prljavštinu zajedno sa viškom vode.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Koliko košta dubinsko pranje tepiha u Pomoravskom okrugu?
             </h3>
             <p>
-              Iznajmljivanje mašine za dubinsko pranje tepiha košta od 3.500
-              RSD za jedan dan. Za taj novac možete oprati neograničen broj
-              tepiha u svom domu. Ako uporedite sa cenom profesionalnog servisa
-              za pranje tepiha koji naplaćuje 300-500 RSD po kvadratnom metru,
-              iznajmljivanje mašine je višestruko isplativije, posebno ako
-              imate više tepiha ili veće površine.
+              Iznajmljivanje mašine za dubinsko pranje tepiha košta od 3.500 RSD
+              za jedan dan. Za taj novac možete oprati neograničen broj tepiha u
+              svom domu. Ako uporedite sa cenom profesionalnog servisa za pranje
+              tepiha koji naplaćuje 300-500 RSD po kvadratnom metru,
+              iznajmljivanje mašine je višestruko isplativije, posebno ako imate
+              više tepiha ili veće površine.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Koliko traje sušenje tepiha posle dubinskog pranja?
             </h3>
             <p>
-              Zahvaljujući snažnoj ekstrakciji naše mašine, tepih se suši
-              znatno brže nego kod ručnog pranja. U proseku, sušenje traje 2
-              do 6 sati zavisno od debljine tepiha i provetrenosti prostorije.
-              Saveti za brže sušenje: otvorite prozore, uključite ventilator
-              ili klima uređaj, i ne gaziте tepih dok se potpuno ne osuši.
+              Zahvaljujući snažnoj ekstrakciji naše mašine, tepih se suši znatno
+              brže nego kod ručnog pranja. U proseku, sušenje traje 2 do 6 sati
+              zavisno od debljine tepiha i provetrenosti prostorije. Saveti za
+              brže sušenje: otvorite prozore, uključite ventilator ili klima
+              uređaj, i ne gaziте tepih dok se potpuno ne osuši.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Dubinsko pranje tepiha u Ćupriji, Paraćinu i Jagodini
             </h3>
             <p>
               Dostavljamo mašinu za dubinsko pranje tepiha na vašu adresu u
-              Ćupriji (300 din dostava), Paraćinu (400 din) i Jagodini (500
-              din). Uz mašinu dobijate profesionalni deterdžent za dubinsko
-              čišćenje tepiha, sve nastavke i detaljna uputstva na srpskom
-              jeziku. Takođe nudimo obuku na licu mesta za 500 dinara.
+              Ćupriji (500 RSD dostava), Paraćinu (1000 RSD) i Jagodini (1000
+              RSD). Dostava se vrši između 16h i 19h, preuzimanje od 10h do 20h.
+              Uz mašinu dobijate profesionalni deterdžent za dubinsko čišćenje
+              tepiha, sve nastavke i detaljna uputstva na srpskom jeziku. Takođe
+              nudimo obuku na licu mesta za 500 dinara.
             </p>
           </div>
         </div>

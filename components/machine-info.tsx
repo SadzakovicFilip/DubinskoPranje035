@@ -4,7 +4,7 @@ import { AccessoriesSlideshow } from "@/components/accessories-slideshow"
 
 export function MachineInfo() {
   return (
-    <section id="machine-info" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="machine-info" className="scroll-mt-16 py-20 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
 

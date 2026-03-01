@@ -7,7 +7,7 @@ import { Breadcrumb } from "@/components/seo/breadcrumb";
 export const metadata: Metadata = {
   title: "Kontakt | Dubinsko Pranje 035 | Ćuprija, Paraćin, Jagodina",
   description:
-    "Kontaktirajte nas za iznajmljivanje mašine za dubinsko pranje u Pomoravskom okrugu (035). Telefon: 060 456 4481. WhatsApp, Viber. Radno vreme 08-20h svaki dan.",
+    "Kontaktirajte nas za iznajmljivanje mašine za dubinsko pranje u Pomoravskom okrugu (035). Telefon: 060 456 4481. WhatsApp, Viber. Preuzimanje 10-20h, dostava 16-19h svaki dan.",
   keywords: [
     "kontakt dubinsko pranje 035",
     "telefon dubinsko pranje Ćuprija",
@@ -141,7 +141,10 @@ export default function KontaktPage() {
                         Ponedeljak - Nedelja
                       </div>
                       <div className="text-2xl font-bold text-foreground">
-                        08:00 - 20:00
+                        Preuzimanje: 10h - 20h
+                      </div>
+                      <div className="text-muted-foreground text-sm mt-1">
+                        Dostava: 16h - 19h
                       </div>
                     </div>
                   </div>
@@ -153,9 +156,9 @@ export default function KontaktPage() {
                         Područje dostave
                       </div>
                       <div className="text-muted-foreground space-y-1">
-                        <p>Ćuprija - dostava 300 din</p>
-                        <p>Paraćin - dostava 400 din</p>
-                        <p>Jagodina - dostava 500 din</p>
+                        <p>Ćuprija - dostava 500 RSD</p>
+                        <p>Paraćin - dostava 1000 RSD</p>
+                        <p>Jagodina - dostava 1000 RSD</p>
                       </div>
                     </div>
                   </div>

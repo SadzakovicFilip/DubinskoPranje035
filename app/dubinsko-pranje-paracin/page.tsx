@@ -8,8 +8,7 @@ import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title:
-    "Dubinsko Pranje Paraćin | Iznajmljivanje Mašina za Čišćenje | 035",
+  title: "Dubinsko Pranje Paraćin | Iznajmljivanje Mašina za Čišćenje | 035",
   description:
     "Dubinsko pranje i čišćenje u Paraćinu - iznajmljivanje profesionalne mašine za dubinsko pranje nameštaja, tepiha i automobila. Dostava na adresu u Paraćinu. Pozovite 060 456 4481.",
   keywords: [
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     url: "https://dubinskopranje035.rs/dubinsko-pranje-paracin",
     images: [
       {
-        url: "/images/DubinskoCiscenje035_slika8.jpg",
+        url: "/images/Paraćin.jpg",
         width: 1200,
         height: 630,
         alt: "Dubinsko pranje u Paraćinu - profesionalna mašina za čišćenje",
@@ -71,10 +70,15 @@ const localBusinessSchema = {
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
-      "Monday", "Tuesday", "Wednesday", "Thursday",
-      "Friday", "Saturday", "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
     ],
-    opens: "08:00",
+    opens: "10:00",
     closes: "20:00",
   },
 };
@@ -105,8 +109,8 @@ export default function ParacinPage() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Iznajmite profesionalnu mašinu za dubinsko pranje u Paraćinu i
                 očistite nameštaj, tepihe i automobile kod kuće. Dostava mašine
-                na vašu adresu u Paraćinu za samo 400 dinara. Deterdžent, oprema
-                i uputstva uključeni u cenu.
+                na vašu adresu u Paraćinu za samo 1000 dinara. Deterdžent,
+                oprema i uputstva uključeni u cenu.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="gap-2">
@@ -125,7 +129,7 @@ export default function ParacinPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
               <Image
-                src="/images/DubinskoCiscenje035_slika8.jpg"
+                src="/images/Paraćin.jpg"
                 alt="Dubinsko pranje u Paraćinu - profesionalna mašina za dubinsko čišćenje"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -192,11 +196,10 @@ export default function ParacinPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
             <p>
               Paraćin je jedan od najživljih gradova u Pomoravskom okrugu,
-              poznat po tekstilnoj industriji i preduzimljivim stanovnicima.
-              Ako živite u Paraćinu i potrebno vam je dubinsko pranje
-              nameštaja, tepiha ili enterijera automobila, nudimo vam
-              pristupačno rešenje - iznajmljivanje profesionalne mašine sa
-              dostavom na vašu adresu.
+              poznat po tekstilnoj industriji i preduzimljivim stanovnicima. Ako
+              živite u Paraćinu i potrebno vam je dubinsko pranje nameštaja,
+              tepiha ili enterijera automobila, nudimo vam pristupačno rešenje -
+              iznajmljivanje profesionalne mašine sa dostavom na vašu adresu.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Koliko košta dubinsko pranje u Paraćinu?
@@ -204,7 +207,7 @@ export default function ParacinPage() {
             <p>
               Cena iznajmljivanja mašine za dubinsko pranje u Paraćinu počinje
               od 3.500 RSD za jedan dan. Dostava na kućnu adresu u Paraćinu
-              košta 400 dinara. Za taj novac dobijate profesionalnu mašinu,
+              košta 1000 dinara. Za taj novac dobijate profesionalnu mašinu,
               deterdžent, sve nastavke i uputstva - i možete oprati neograničen
               broj nameštaja, tepiha i automobila tokom trajanja najma.
             </p>
@@ -212,9 +215,9 @@ export default function ParacinPage() {
               Dostava mašine za dubinsko pranje u Paraćinu
             </h3>
             <p>
-              Dostavljamo mašinu za dubinsko pranje na vašu adresu u Paraćinu
-              svakog dana od 08:00 do 20:00, uključujući vikend. Možete i
-              lično preuzeti mašinu bez dodatnih troškova dostave. Za
+              Dostavljamo mašinu za dubinsko pranje na vašu adresu u Paraćinu.
+              Dostava se vrši u periodu između 16h i 19h. Lično preuzimanje može
+              da se vrši od 10h do 20h, svakog dana uključujući vikend. Za
               rezervaciju pozovite 060 456 4481 ili pišite na WhatsApp/Viber.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
@@ -223,7 +226,9 @@ export default function ParacinPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Profesionalnu mašinu za dubinsko pranje i čišćenje</li>
               <li>Profesionalni deterdžent optimizovan za dubinsko pranje</li>
-              <li>Električna šrafilica sa četkama za ribanje tvrdokornih mrlja</li>
+              <li>
+                Električna šrafilica sa četkama za ribanje tvrdokornih mrlja
+              </li>
               <li>Kompletna štampana uputstva na srpskom jeziku</li>
               <li>Telefonska podrška tokom celog perioda korišćenja</li>
               <li>Opciona obuka na licu mesta (500 din)</li>

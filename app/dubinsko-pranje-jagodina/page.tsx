@@ -8,8 +8,7 @@ import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title:
-    "Dubinsko Pranje Jagodina | Iznajmljivanje Mašina za Čišćenje | 035",
+  title: "Dubinsko Pranje Jagodina | Iznajmljivanje Mašina za Čišćenje | 035",
   description:
     "Dubinsko pranje i čišćenje u Jagodini - iznajmljivanje profesionalne mašine za dubinsko pranje nameštaja, tepiha i automobila. Dostava na adresu u Jagodini. Pozovite 060 456 4481.",
   keywords: [
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     url: "https://dubinskopranje035.rs/dubinsko-pranje-jagodina",
     images: [
       {
-        url: "/images/DubinskoCiscenje035_slika9.jpg",
+        url: "/images/Jagodina1.jpg",
         width: 1200,
         height: 630,
         alt: "Dubinsko pranje u Jagodini - profesionalna mašina za čišćenje",
@@ -71,10 +70,15 @@ const localBusinessSchema = {
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
-      "Monday", "Tuesday", "Wednesday", "Thursday",
-      "Friday", "Saturday", "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
     ],
-    opens: "08:00",
+    opens: "10:00",
     closes: "20:00",
   },
 };
@@ -105,8 +109,8 @@ export default function JagodinaPage() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Iznajmite profesionalnu mašinu za dubinsko pranje u Jagodini i
                 očistite nameštaj, tepihe i automobile kod kuće. Dostava mašine
-                na vašu adresu u Jagodini za samo 500 dinara. Deterdžent, oprema
-                i uputstva uključeni u cenu.
+                na vašu adresu u Jagodini za samo 1000 dinara. Deterdžent,
+                oprema i uputstva uključeni u cenu.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="gap-2">
@@ -125,7 +129,7 @@ export default function JagodinaPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
               <Image
-                src="/images/DubinskoCiscenje035_slika9.jpg"
+                src="/images/Jagodina1.jpg"
                 alt="Dubinsko pranje u Jagodini - profesionalna mašina za dubinsko čišćenje"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -192,8 +196,8 @@ export default function JagodinaPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
             <p>
               Jagodina je najveći grad u Pomoravskom okrugu i centar regiona.
-              Poznata po Zoo vrtu, Akva parku i preduzimljivom duhu, Jagodina
-              je grad u kome je potražnja za kvalitetnim uslugama čišćenja u
+              Poznata po Zoo vrtu, Akva parku i preduzimljivom duhu, Jagodina je
+              grad u kome je potražnja za kvalitetnim uslugama čišćenja u
               stalnom porastu. Nudimo stanovnicima Jagodine pristupačno rešenje
               za dubinsko pranje nameštaja, tepiha i automobila.
             </p>
@@ -203,7 +207,7 @@ export default function JagodinaPage() {
             <p>
               Cena iznajmljivanja mašine za dubinsko pranje u Jagodini počinje
               od 3.500 RSD za jedan dan. Dostava na kućnu adresu u Jagodini
-              košta 500 dinara. Za dva dana korišćenja cena je 5.500 RSD, a za
+              košta 1000 dinara. Za dva dana korišćenja cena je 5.500 RSD, a za
               tri dana 7.000 RSD. Uz mašinu dobijate sve potrebno - deterdžent,
               nastavke i uputstva.
             </p>
@@ -211,10 +215,11 @@ export default function JagodinaPage() {
               Dostava mašine za dubinsko pranje u Jagodini
             </h3>
             <p>
-              Dostavljamo mašinu za dubinsko pranje na vašu adresu u Jagodini
-              svakog dana od 08:00 do 20:00, uključujući vikend i praznike.
-              Možete i lično preuzeti mašinu bez dodatnih troškova. Za
-              rezervaciju pozovite 060 456 4481 ili pišite na WhatsApp/Viber.
+              Dostavljamo mašinu za dubinsko pranje na vašu adresu u Jagodini.
+              Dostava se vrši u periodu između 16h i 19h. Lično preuzimanje može
+              da se vrši od 10h do 20h, svakog dana uključujući vikend i
+              praznike. Za rezervaciju pozovite 060 456 4481 ili pišite na
+              WhatsApp/Viber.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Šta dobijate uz iznajmljivanje mašine u Jagodini?
@@ -222,7 +227,9 @@ export default function JagodinaPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Profesionalnu mašinu za dubinsko pranje i čišćenje</li>
               <li>Profesionalni deterdžent optimizovan za dubinsko pranje</li>
-              <li>Električna šrafilica sa četkama za ribanje tvrdokornih mrlja</li>
+              <li>
+                Električna šrafilica sa četkama za ribanje tvrdokornih mrlja
+              </li>
               <li>Kompletna štampana uputstva na srpskom jeziku</li>
               <li>Telefonska podrška tokom celog perioda korišćenja</li>
               <li>Opciona obuka na licu mesta (500 din)</li>

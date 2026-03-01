@@ -75,10 +75,7 @@ export default function CenovnikPage() {
       <section className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumb
-            items={[
-              { label: "Početna", href: "/" },
-              { label: "Cenovnik" },
-            ]}
+            items={[{ label: "Početna", href: "/" }, { label: "Cenovnik" }]}
           />
 
           <div className="text-center mb-8">
@@ -86,9 +83,9 @@ export default function CenovnikPage() {
               Cenovnik Dubinskog Pranja u Pomoravskom Okrugu (035)
             </h1>
             <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-              Transparentne cene iznajmljivanja profesionalne mašine za
-              dubinsko pranje i čišćenje u Ćupriji, Paraćinu i Jagodini. Bez
-              skrivenih troškova - sve uključeno u cenu.
+              Transparentne cene iznajmljivanja profesionalne mašine za dubinsko
+              pranje i čišćenje u Ćupriji, Paraćinu i Jagodini. Bez skrivenih
+              troškova - sve uključeno u cenu.
             </p>
           </div>
         </div>
@@ -106,8 +103,8 @@ export default function CenovnikPage() {
               Koliko košta dubinsko pranje tepiha po m2?
             </h3>
             <p>
-              Kod nas ne plaćate po kvadratnom metru. Plaćate fiksnu dnevnu
-              cenu za iznajmljivanje mašine (od 3.500 RSD) i možete oprati
+              Kod nas ne plaćate po kvadratnom metru. Plaćate fiksnu dnevnu cenu
+              za iznajmljivanje mašine (od 3.500 RSD) i možete oprati
               neograničen broj tepiha. Profesionalni servisi naplaćuju 300-500
               RSD po m2, što za prosečan stan iznosi 5.000-15.000 RSD.
               Iznajmljivanjem mašine štedite 50-70%.
@@ -116,15 +113,16 @@ export default function CenovnikPage() {
               Da li je deterdžent uključen u cenu?
             </h3>
             <p>
-              Da, profesionalni deterdžent za dubinsko pranje je uključen u
-              cenu iznajmljivanja. Ne morate kupovati ništa dodatno.
+              Da, profesionalni deterdžent za dubinsko pranje je uključen u cenu
+              iznajmljivanja. Ne morate kupovati ništa dodatno.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Koliko košta dostava u Ćupriji, Paraćinu i Jagodini?
             </h3>
             <p>
-              Dostava u Ćupriji košta 300 din, u Paraćinu 400 din, a u
-              Jagodini 500 din. Možete i lično preuzeti mašinu bez troškova
+              Dostava u Ćupriji košta 500 RSD, u Paraćinu 1000 RSD, a u Jagodini
+              1000 RSD. Dostava se vrši u periodu između 16h i 19h, preuzimanje
+              može od 10h do 20h. Možete i lično preuzeti mašinu bez troškova
               dostave.
             </p>
           </div>

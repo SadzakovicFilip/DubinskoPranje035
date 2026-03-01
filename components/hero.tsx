@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center px-4 pt-24 pb-16 sm:px-6 sm:pt-28 sm:pb-20 lg:px-8 lg:pt-32 overflow-hidden"
+      className="relative min-h-screen flex items-center px-4 pt-20 pb-16 sm:px-6 sm:pt-24 sm:pb-20 lg:px-8 lg:pt-28 overflow-hidden"
     >
       <div className="absolute inset-0 -z-10 hidden md:block bg-black">
         <Image

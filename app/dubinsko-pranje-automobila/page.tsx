@@ -31,14 +31,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/dubinsko-pranje-automobila" },
   openGraph: {
-    title:
-      "Dubinsko Pranje Automobila | Ćuprija, Paraćin, Jagodina (035)",
+    title: "Dubinsko Pranje Automobila | Ćuprija, Paraćin, Jagodina (035)",
     description:
       "Profesionalno dubinsko pranje i čišćenje enterijera automobila - sedišta, tapacirung, gepek. Iznajmite mašinu sa dostavom u Pomoravskom okrugu.",
     url: "https://dubinskopranje035.rs/dubinsko-pranje-automobila",
     images: [
       {
-        url: "/images/DubinskoPranje035_slika3.jpg",
+        url: "/images/DubinskoCiscenje035_slika7.jpg",
         width: 1200,
         height: 630,
         alt: "Dubinsko pranje auto sedišta profesionalnom mašinom",
@@ -120,7 +119,7 @@ export default function DubinskoAutoPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
               <Image
-                src="/images/DubinskoPranje035_slika3.jpg"
+                src="/images/DubinskoCiscenje035_slika7.jpg"
                 alt="Dubinsko pranje enterijera automobila - čišćenje auto sedišta mašinom"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -191,10 +190,10 @@ export default function DubinskoAutoPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
             <p>
               Dubinsko pranje enterijera automobila je proces koji koristi
-              profesionalnu mašinu za dubinsko čišćenje svih tekstilnih
-              površina u vozilu. Mašina ubrizgava rastvor deterdženta pod
-              pritiskom u vlakna tkanine sedišta, a zatim snažnom ekstrakcijom
-              izvlači svu prljavštinu, mrlje i višak vode.
+              profesionalnu mašinu za dubinsko čišćenje svih tekstilnih površina
+              u vozilu. Mašina ubrizgava rastvor deterdženta pod pritiskom u
+              vlakna tkanine sedišta, a zatim snažnom ekstrakcijom izvlači svu
+              prljavštinu, mrlje i višak vode.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Zašto je dubinsko pranje auto sedišta važno?
@@ -210,22 +209,23 @@ export default function DubinskoAutoPage() {
               Koliko košta dubinsko pranje automobila u Pomoravskom okrugu?
             </h3>
             <p>
-              Iznajmljivanje mašine za dubinsko pranje automobila košta od
-              3.500 RSD za jedan dan. Za taj novac možete temeljno oprati ceo
+              Iznajmljivanje mašine za dubinsko pranje automobila košta od 3.500
+              RSD za jedan dan. Za taj novac možete temeljno oprati ceo
               enterijer jednog ili više automobila. Profesionalni servisi za
-              dubinsko čišćenje automobila naplaćuju 5.000-15.000 RSD po
-              vozilu, tako da je iznajmljivanje mašine višestruko isplativije.
+              dubinsko čišćenje automobila naplaćuju 5.000-15.000 RSD po vozilu,
+              tako da je iznajmljivanje mašine višestruko isplativije.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Dubinsko pranje automobila u Ćupriji, Paraćinu i Jagodini
             </h3>
             <p>
-              Dostavljamo mašinu za dubinsko pranje automobila na vašu adresu
-              u Ćupriji, Paraćinu i Jagodini. Uz mašinu dobijate specijalne
-              nastavke za auto sedišta i teško dostupna mesta, profesionalni
-              deterdžent i detaljna uputstva za dubinsko čišćenje enterijera
-              vozila. Operite svoj automobil profesionalno bez odlaska na
-              autoperionu.
+              Dostavljamo mašinu za dubinsko pranje automobila na vašu adresu u
+              Ćupriji (500 RSD dostava), Paraćinu (1000 RSD) i Jagodini (1000
+              RSD). Dostava se vrši između 16h i 19h, preuzimanje od 10h do 20h.
+              Uz mašinu dobijate specijalne nastavke za auto sedišta i teško
+              dostupna mesta, profesionalni deterdžent i detaljna uputstva za
+              dubinsko čišćenje enterijera vozila. Operite svoj automobil
+              profesionalno bez odlaska na autoperionu.
             </p>
           </div>
         </div>

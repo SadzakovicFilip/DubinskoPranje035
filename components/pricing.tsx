@@ -8,7 +8,8 @@ const pricingPlans = [
   {
     duration: "1 Dan",
     price: "3,500",
-    description: "Idealno za brzo, temeljno čišćenje jedne prostorije ili automobila.",
+    description:
+      "Idealno za brzo, temeljno čišćenje jedne prostorije ili automobila.",
     popular: false,
   },
   {
@@ -20,7 +21,8 @@ const pricingPlans = [
   {
     duration: "3 Dana",
     price: "7,000",
-    description: "Za veće projekte, više prostora ili detaljno čišćenje bez žurbe.",
+    description:
+      "Za veće projekte, više prostora ili detaljno čišćenje bez žurbe.",
     popular: false,
   },
 ];
@@ -29,10 +31,11 @@ const additionalServices = [
   {
     icon: Truck,
     title: "Dostava na kućnu adresu",
+    note: "Dostava 16h–19h, preuzimanje 10h–20h",
     prices: [
-      { city: "Ćuprija", price: "300 din" },
-      { city: "Paraćin", price: "400 din" },
-      { city: "Jagodina", price: "500 din" },
+      { city: "Ćuprija", price: "500 RSD" },
+      { city: "Paraćin", price: "1000 RSD" },
+      { city: "Jagodina", price: "1000 RSD" },
     ],
   },
   {
@@ -53,7 +56,7 @@ export function Pricing() {
   return (
     <section
       id="pricing"
-      className="px-4 py-20 sm:py-28 sm:px-6 lg:px-8 bg-background relative"
+      className="scroll-mt-16 px-4 py-20 sm:py-28 sm:px-6 lg:px-8 bg-background relative"
     >
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-3 duration-700">
@@ -152,7 +155,7 @@ export function Pricing() {
         </div>
 
         {/* Additional Services */}
-        <div className="max-w-4xl mx-auto">
+        <div id="dodatne-usluge" className="max-w-4xl mx-auto scroll-mt-16">
           <h3 className="text-2xl font-bold text-center mb-10 text-foreground">
             Dodatne usluge
           </h3>
@@ -172,6 +175,11 @@ export function Pricing() {
                       <h4 className="font-semibold text-lg text-foreground mb-3">
                         {service.title}
                       </h4>
+                      {"note" in service && service.note && (
+                        <p className="text-sm text-muted-foreground mb-2">
+                          {service.note}
+                        </p>
+                      )}
                       <div className="space-y-2">
                         {service.prices.map((priceItem, priceIndex) => (
                           <div
@@ -199,9 +207,9 @@ export function Pricing() {
         <div className="mt-12 text-center px-4">
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed bg-secondary/50 rounded-xl px-6 py-4">
             <strong className="text-foreground">Napomena:</strong> Osnovne cene
-            podrazumevaju da vi preuzimate i vraćate mašinu sa naše lokacije. Za
-            dostavu na vašu adresu i dodatnu obuku na licu mesta, pogledajte
-            dodatne usluge.
+            podrazumevaju da vi preuzimate i vraćate mašinu (preuzimanje od 10h
+            do 20h). Dostava se vrši između 16h i 19h. Za dostavu na vašu adresu
+            i dodatnu obuku na licu mesta, pogledajte dodatne usluge.
           </p>
         </div>
       </div>

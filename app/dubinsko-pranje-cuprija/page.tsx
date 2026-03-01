@@ -8,8 +8,7 @@ import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title:
-    "Dubinsko Pranje Ćuprija | Iznajmljivanje Mašina za Čišćenje | 035",
+  title: "Dubinsko Pranje Ćuprija | Iznajmljivanje Mašina za Čišćenje | 035",
   description:
     "Dubinsko pranje i čišćenje u Ćupriji - iznajmljivanje profesionalne mašine za dubinsko pranje nameštaja, tepiha i automobila. Dostava na adresu u Ćupriji. Pozovite 060 456 4481.",
   keywords: [
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     url: "https://dubinskopranje035.rs/dubinsko-pranje-cuprija",
     images: [
       {
-        url: "/images/DubinskoCiscenje035_slika6.jpg",
+        url: "/images/Ćuprija1.jpg",
         width: 1200,
         height: 630,
         alt: "Dubinsko pranje u Ćupriji - profesionalna mašina za čišćenje",
@@ -71,10 +70,15 @@ const localBusinessSchema = {
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
-      "Monday", "Tuesday", "Wednesday", "Thursday",
-      "Friday", "Saturday", "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
     ],
-    opens: "08:00",
+    opens: "10:00",
     closes: "20:00",
   },
 };
@@ -105,7 +109,7 @@ export default function CuprijaPage() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Iznajmite profesionalnu mašinu za dubinsko pranje u Ćupriji i
                 očistite nameštaj, tepihe i automobile kod kuće. Dostava mašine
-                na vašu adresu u Ćupriji za samo 300 dinara. Deterdžent, oprema
+                na vašu adresu u Ćupriji za samo 500 dinara. Deterdžent, oprema
                 i uputstva uključeni u cenu.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -125,7 +129,7 @@ export default function CuprijaPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
               <Image
-                src="/images/DubinskoCiscenje035_slika6.jpg"
+                src="/images/Ćuprija1.jpg"
                 alt="Dubinsko pranje u Ćupriji - profesionalna mašina za dubinsko čišćenje"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -191,28 +195,28 @@ export default function CuprijaPage() {
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
             <p>
-              Ćuprija je grad u centralnoj Srbiji, u Pomoravskom okrugu,
-              poznat po bogatoj istoriji i gostoprimljivim ljudima. Ako živite
-              u Ćupriji ili okolini i tražite profesionalno dubinsko pranje
+              Ćuprija je grad u centralnoj Srbiji, u Pomoravskom okrugu, poznat
+              po bogatoj istoriji i gostoprimljivim ljudima. Ako živite u
+              Ćupriji ili okolini i tražite profesionalno dubinsko pranje
               nameštaja, tepiha ili automobila, na pravom ste mestu.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Zašto izabrati dubinsko pranje u Ćupriji umesto servisa?
             </h3>
             <p>
-              Profesionalni servisi za dubinsko čišćenje u Ćupriji naplaćuju
-              od 5.000 do 15.000 dinara za čišćenje jedne sofe ili kompleta
+              Profesionalni servisi za dubinsko čišćenje u Ćupriji naplaćuju od
+              5.000 do 15.000 dinara za čišćenje jedne sofe ili kompleta
               nameštaja. Iznajmljivanjem naše mašine za samo 3.500 RSD dnevno,
-              možete oprati sav nameštaj, sve tepihe i automobile u svom domu
-              - koliko god puta želite tokom trajanja najma.
+              možete oprati sav nameštaj, sve tepihe i automobile u svom domu -
+              koliko god puta želite tokom trajanja najma.
             </p>
             <h3 className="text-xl font-semibold text-foreground">
               Dostava mašine za dubinsko pranje u Ćupriji
             </h3>
             <p>
               Dostavljamo mašinu za dubinsko pranje na vašu kućnu adresu u
-              Ćupriji za samo 300 dinara. Možete i lično preuzeti mašinu bez
-              dodatnih troškova. Radimo svakog dana od 08:00 do 20:00,
+              Ćupriji za samo 500 dinara. Dostava se vrši u periodu između 16h i
+              19h. Lično preuzimanje može da se vrši od 10h do 20h, svakog dana
               uključujući vikend. Pozovite nas na 060 456 4481 ili pišite na
               WhatsApp/Viber za rezervaciju.
             </p>
@@ -222,7 +226,9 @@ export default function CuprijaPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Profesionalnu mašinu za dubinsko pranje i čišćenje</li>
               <li>Profesionalni deterdžent optimizovan za dubinsko pranje</li>
-              <li>Električna šrafilica sa četkama za ribanje tvrdokornih mrlja</li>
+              <li>
+                Električna šrafilica sa četkama za ribanje tvrdokornih mrlja
+              </li>
               <li>Kompletna štampana uputstva na srpskom jeziku</li>
               <li>Telefonska podrška tokom celog perioda korišćenja</li>
               <li>Opciona obuka na licu mesta (500 din)</li>

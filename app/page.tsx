@@ -22,7 +22,7 @@ export default function Home() {
       <WhatToClean />
 
       {/* Location links section for local SEO */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8 bg-background">
+      <section id="lokacije" className="scroll-mt-16 px-4 py-16 sm:px-6 lg:px-8 bg-background">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <span className="inline-block text-sm font-medium text-primary mb-4 tracking-wider uppercase">
@@ -41,17 +41,17 @@ export default function Home() {
               {
                 city: "Ćuprija",
                 href: "/dubinsko-pranje-cuprija",
-                delivery: "Dostava: 300 din",
+                delivery: "Dostava: 500 RSD",
               },
               {
                 city: "Paraćin",
                 href: "/dubinsko-pranje-paracin",
-                delivery: "Dostava: 400 din",
+                delivery: "Dostava: 1000 RSD",
               },
               {
                 city: "Jagodina",
                 href: "/dubinsko-pranje-jagodina",
-                delivery: "Dostava: 500 din",
+                delivery: "Dostava: 1000 RSD",
               },
             ].map((location) => (
               <Link

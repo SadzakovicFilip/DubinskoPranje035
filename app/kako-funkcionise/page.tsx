@@ -49,7 +49,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 2,
       name: "Preuzmite ili sačekajte dostavu",
-      text: "Preuzmite mašinu lično ili sačekajte dostavu na vašu adresu u Ćupriji, Paraćinu ili Jagodini.",
+      text: "Preuzmite mašinu lično od 10h do 20h ili sačekajte dostavu na vašu adresu u Ćupriji, Paraćinu ili Jagodini (dostava između 16h i 19h).",
     },
     {
       "@type": "HowToStep",
@@ -100,7 +100,7 @@ export default function KakoFunkPage() {
     {
       num: "02",
       title: "Preuzmite ili sačekajte dostavu",
-      desc: "Preuzmite mašinu lično bez dodatnih troškova, ili izaberite dostavu na vašu adresu u Ćupriji (300 din), Paraćinu (400 din) ili Jagodini (500 din).",
+      desc: "Preuzmite mašinu lično od 10h do 20h, ili izaberite dostavu na vašu adresu u Ćupriji (500 RSD), Paraćinu (1000 RSD) ili Jagodini (1000 RSD) – dostava u periodu između 16h i 19h.",
     },
     {
       num: "03",

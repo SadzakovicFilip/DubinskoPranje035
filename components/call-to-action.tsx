@@ -87,7 +87,7 @@ export function CallToAction() {
 
         <div className="space-y-3">
           <p className="text-sm text-muted-foreground bg-secondary/50 inline-block px-6 py-3 rounded-full">
-            Odgovaramo odmah - dostupni smo 7 dana u nedelji od 8:00 do 20:00
+            Preuzimanje 10h-20h, dostava 16h-19h – dostupni smo 7 dana u nedelji
           </p>
           <p className="text-sm text-muted-foreground">
             Pratite nas na Instagramu{" "}

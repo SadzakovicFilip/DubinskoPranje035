@@ -122,7 +122,8 @@ export function Footer() {
                 <Clock className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <span className="text-muted-foreground">Pon - Ned</span>
-                  <div className="font-semibold text-foreground">08:00 - 20:00</div>
+                  <div className="font-semibold text-foreground">Preuzimanje: 10h-20h</div>
+                  <div className="text-sm text-muted-foreground">Dostava: 16h-19h</div>
                 </div>
               </li>
             </ul>
